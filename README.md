@@ -2,4 +2,4 @@
 
 This repository is your starting point for the assignment.
 
-Link to GitHub pages website: https://liangvi-cs5500.github.io/index.html [Github] (https://liangvi-cs5500.github.io/index.html)
+Link to GitHub pages website: https://liangvi-cs5500.github.io/index.html
