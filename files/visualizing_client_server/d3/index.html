@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DS5500 - Client Server Visualization</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--d3 Import -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+    <h2 class="title" align="center">DS5500 - Client Server Visualization</h2>
+    <h3 class="title" align="center">ROC Plot</h3>
+    <div class="container-fluid">
+    <div class="form-group row">
+
+      <div class="col-xs-3">
+      <label for="c">Hyperparameter (C) (Min 1, Max 10) </label>
+      <input type="number" class="form-control" id="c" value="2" min="1" max="10"/>
+      </div>
+
+      <div class="col-xs-3">
+        <label for="scaler">Scaler Type</label>
+        <select class="form-control" id="scaler">
+          <option value="" selected disabled>Please select</option> 
+          <option value="standard"> Standardization </option>
+          <option value="normalization"> Normalization </option>
+        </select>
+        </div>
+</div>
+
+    <div class="form-group row">
+      <input class="btn btn-primary" name="updateButton" type="button" 
+             value="Visualize"
+             onclick="plot()" />
+    </div>
+
+    <div class="row">
+      <div id="chart"/>
+    </div>
+    
+</body>
+    <script type="text/javascript" src="main.js"/></script>
+</html>
